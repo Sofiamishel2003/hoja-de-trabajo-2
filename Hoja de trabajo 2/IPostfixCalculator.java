@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 public interface IPostfixCalculator{
-    public interface IPostfixCalculator {
+    
     
         boolean isOneItem(IStack operandos);
     
@@ -21,4 +21,3 @@ public interface IPostfixCalculator{
     
         java.util.ArrayList<String> getItems(String _expresion);
     }
-}
