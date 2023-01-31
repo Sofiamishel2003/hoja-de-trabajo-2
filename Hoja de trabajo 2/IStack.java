@@ -1,6 +1,11 @@
-/**
- * @author sofia.velasquez, Julio garcias salas, Jose
- */
+//
+//
+//  @ Project : hoja de trabajo 2
+//  @ File Name : IStack.java
+//  @ Date : 31/01/2023
+//  @ Author : Sofía Velásquez, Joaquín Campos, Julio García Salas
+// 
+//
 public interface IStack<T>{
 	
 	void push(T e);

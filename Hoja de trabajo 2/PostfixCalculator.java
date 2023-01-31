@@ -1,6 +1,11 @@
-/**
- * @author sofia.velasquez, Julio garcia salas y Jose Joaquin campos
- */
+//
+//
+//  @ Project : hoja de trabajo 2
+//  @ File Name : PostfixCalculator.java
+//  @ Date : 31/01/2023
+//  @ Author : Sofía Velásquez, Joaquín Campos, Julio García Salas
+// 
+//
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;

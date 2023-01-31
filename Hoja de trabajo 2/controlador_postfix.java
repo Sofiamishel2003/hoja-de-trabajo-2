@@ -1,3 +1,11 @@
+//
+//
+//  @ Project : hoja de trabajo 2
+//  @ File Name : controlador_postfix.java
+//  @ Date : 31/01/2023
+//  @ Author : Sofía Velásquez, Joaquín Campos, Julio García Salas
+// 
+//
 import Stack;
 import PostfixCalculator;
 import java.io.*;
@@ -9,7 +17,11 @@ import javax.print.DocFlavor.STRING;
 
 import java.util.ArrayList; 
 public class controlador_postfix {
-	public static void main(String[] args) 
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) 
     {
         ArrayList<String> lineas = new ArrayList<String>();
         String operacion="1 2 + 4 * 3 +";
@@ -38,6 +50,11 @@ public class controlador_postfix {
 	      }  
       //  System.out.println(lector.read(nombre_archivo));
     }
+    
+    /** 
+     * @param lista se ingresa una lista con los digitos para que se puedan hacer las operaciones
+     * @return int
+     */
     public static int calacular (String[] lista)
     {
         stack_<Integer> operandos= new stack_<Integer>();
