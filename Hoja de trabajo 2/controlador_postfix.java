@@ -4,10 +4,9 @@
 //  @ File Name : controlador_postfix.java
 //  @ Date : 31/01/2023
 //  @ Author : Sofía Velásquez, Joaquín Campos, Julio García Salas
-// 
 //
-import Stack;
-import PostfixCalculator;
+//
+
 import java.io.*;
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
@@ -15,13 +14,13 @@ import java.util.Scanner;
 
 import javax.print.DocFlavor.STRING;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
 public class controlador_postfix {
-	
-    /** 
+
+    /**
      * @param args
      */
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         ArrayList<String> lineas = new ArrayList<String>();
         String operacion="1 2 + 4 * 3 +";
@@ -41,17 +40,17 @@ public class controlador_postfix {
             e.printStackTrace();
         }
         int i=1;
-        for (String str : lineas) 
-	      {
+        for (String str : lineas)
+        {
             String[] line = str.split(" ");
-            System.out.println(i+". Operacion postfix: "+str);	
+            System.out.println(i+". Operacion postfix: "+str);
             System.out.println("    -El resultado es : "+calacular(line));
-            i=i+1;	
-	      }  
-      //  System.out.println(lector.read(nombre_archivo));
+            i=i+1;
+        }
+        //  System.out.println(lector.read(nombre_archivo));
     }
-    
-    /** 
+
+    /**
      * @param lista se ingresa una lista con los digitos para que se puedan hacer las operaciones
      * @return int
      */
@@ -59,9 +58,9 @@ public class controlador_postfix {
     {
         stack_<Integer> operandos= new stack_<Integer>();
         PostfixCalculator computadorsica = new PostfixCalculator();
-        for(String i : lista) 
+        for(String i : lista)
         {
-            if (i.trim().equals("")) 
+            if (i.trim().equals(""))
             {
                 continue;
             }
@@ -71,8 +70,8 @@ public class controlador_postfix {
                 case "-":
                 case "*":
                 case "/":
-                    int a=operandos.pull(); 
-                    int b=operandos.pull(); 
+                    int a=operandos.pull();
+                    int b=operandos.pull();
                     int ans=0;
                     switch (i)
                     {
@@ -91,14 +90,14 @@ public class controlador_postfix {
                         default:
                             break;
                     }
-                operandos.push(ans);
-                break;
+                    operandos.push(ans);
+                    break;
                 default:
                     int j=Integer.parseInt(i);
                     operandos.push(j);
                     break;
             }
-            
+
         }
         return operandos.pull();
     }
